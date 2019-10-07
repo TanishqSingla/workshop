@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example weather app</title>
+</head>
+<body>
+    <input type="text" placeholder="enter your city name" id="city">
+    <button id="enter">Submit</button>
+    <p id="result"></p>
+</body>
+<script>
+    let cityName = document.getElementById("city");
+    let enterBtn = document.getElementById("enter");
+    let result = document.getElementById("result");
+    enterBtn.addEventListener("click",function(){
+        getWeather(cityName.value);
+    })
+    let getWeather = function(cityName){
+        let xhr = new XMLHttpRequest();
+        xhr.open("GET",`/weather?city=${cityName}`);
+        xhr.send();
+
+        xhr.onload = function(){
+            if(this.readyState == 4 && this.status == 200)
+            {
+                result.textContent = JSON.parse(this.responseText).result;
+            }else{
+                result.textContent = JSON.parse(this.responseText).error;
+            }
+        }
+    }
+</script>
+</html>
