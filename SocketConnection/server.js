@@ -19,9 +19,29 @@ app.use(express.static(path.join(__dirname, 'public'))); // To serve static file
 
 io.on('connection', function(socket){
   socket.on('chat message', function(msg){
-    socket.emit('chat message', msg);
+    socket.broadcast.emit('chat message', msg);
   });
+  socket.join()
   console.log("Connection Established")
 });
   
 server.listen(port , ()=>{console.log(`Listening on Port ${port}`)})
+
+
+// socket.on('socket name',function(msg){---}) is used to listen for the event
+
+// socket.on('disconnect',function(){----})
+
+// socket.emit('name',message) it emits to the same socket through which client is connected to server
+
+// socket.broadcast.emit('name',message);
+
+// io.emit('name',msg) it emits to every one connected to server
+
+
+/** room related functions */
+// io.to(room name).emit("name",message)
+
+// socket.broadcast.to(room name).emit('name',message);
+
+//socket.join(room name);  to join a given room
