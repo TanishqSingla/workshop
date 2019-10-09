@@ -1,24 +1,24 @@
                                                     <<RESOURCES USED>>
-<<FOR JAVASCRIPT>>
+    <<FOR JAVASCRIPT>>
 https://developer.mozilla.org/en-US/docs/Web/JavaScript
 
-<<FOR NODEJS>>
+    <<FOR NODEJS>>
 https://nodejs.org/en/
 https://www.w3schools.com/nodejs/
 
-<<FOR MONGODB>>
+    <<FOR MONGODB>>
 http://mongodb.github.io/node-mongodb-native/3.2/api/
 https://mongodb.github.io/node-mongodb-native/markdown-docs/queries.html
 https://docs.mongodb.com/manual/introduction/
 
-<<FOR NPM modules>>
+    <<FOR NPM modules>>
 https://www.npmjs.com
 
-<<SOCKETIO>>
+    <<SOCKETIO>>
 https://www.npmjs.com/package/socket.io
 
-<<EXPRESSJS>>
+    <<EXPRESSJS>>
 https://www.npmjs.com/package/express
 
-<<NODEMAILER>>
+    <<NODEMAILER>>
 https://nodemailer.com/about
