@@ -21,4 +21,4 @@ https://www.npmjs.com/package/socket.io
 https://www.npmjs.com/package/express
 
 <<NODEMAILER>>
-https://nodemailer.com/about/
+https://nodemailer.com/about
